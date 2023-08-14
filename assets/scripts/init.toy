@@ -1,0 +1,40 @@
+import standard;
+import engine;
+import input;
+
+
+//input settings, mapping SDL2's virtual keys to event names
+mapInputEventToKeyDown("character_up",    "w"); //event, keysym
+mapInputEventToKeyDown("character_left",  "a"); //event, keysym
+mapInputEventToKeyDown("character_down",  "s"); //event, keysym
+mapInputEventToKeyDown("character_right", "d"); //event, keysym
+
+mapInputEventToKeyUp("character_up",    "w"); //event, keysym
+mapInputEventToKeyUp("character_left",  "a"); //event, keysym
+mapInputEventToKeyUp("character_down",  "s"); //event, keysym
+mapInputEventToKeyUp("character_right", "d"); //event, keysym
+
+mapInputEventToKeyDown("character_up",    "up"); //event, keysym
+mapInputEventToKeyDown("character_left",  "left"); //event, keysym
+mapInputEventToKeyDown("character_down",  "down"); //event, keysym
+mapInputEventToKeyDown("character_right", "right"); //event, keysym
+
+mapInputEventToKeyUp("character_up",    "up"); //event, keysym
+mapInputEventToKeyUp("character_left",  "left"); //event, keysym
+mapInputEventToKeyUp("character_down",  "down"); //event, keysym
+mapInputEventToKeyUp("character_right", "right"); //event, keysym
+
+mapInputEventToKeyDown("character_attack", "space"); //event, keysym
+
+mapInputEventToKeyDown("music_toggle", "m"); //event, keysym
+mapInputEventToKeyDown("music_up", "."); //event, keysym
+mapInputEventToKeyDown("music_down", ","); //event, keysym
+
+//TODO: escape to kill the game
+
+
+//this function must always be called, or the engine won't run
+initWindow("Game Jam", 1080, 720, false); //TODO: custom FPS setting
+
+//kick off the logic of the scene graph
+loadRootNode("scripts:/empty_scene.toy");
